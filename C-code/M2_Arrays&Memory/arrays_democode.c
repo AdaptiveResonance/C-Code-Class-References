@@ -6,6 +6,7 @@ int main()
 	int count = 0;
 	for(; count < sizeof(arrint)/sizeof(int);count++)
 	{
+	printf("arrint[%d] = %x\n", count, arrint[count]);
 	printf("arrint[%d] = %d\n", count, arrint[count]);
 	}
 	

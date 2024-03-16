@@ -11,7 +11,7 @@ int main()
 			printf("case 1 selected\n");
 			if(chr_select >'5')
 			{
-			//Do something 	
+			print("num is 5") 	
 			}
 			break;
 			

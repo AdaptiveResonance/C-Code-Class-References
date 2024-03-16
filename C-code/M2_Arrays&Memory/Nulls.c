@@ -4,7 +4,7 @@ int main()
 
 {
 	char arrChar[6] = {'a','b','\0','d','e','f','G','\0'};
-	char arrString2[] = "ABCDEFG";
+	char arrString2[] = "ABCDEFG"; //8 length
     int array[] = {1,2,3};
 	memset(arrChar[3], '\0');//check this out
 

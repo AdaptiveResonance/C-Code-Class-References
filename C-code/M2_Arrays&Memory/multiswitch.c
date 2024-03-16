@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 
 int main()
@@ -27,5 +26,5 @@ int main()
                 default:
 
                         printf(“I deal with the default case only”);//default case is similair to else statement!
-
+        }
 }

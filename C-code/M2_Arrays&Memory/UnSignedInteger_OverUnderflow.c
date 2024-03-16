@@ -12,7 +12,7 @@
 
 int main()
     {	  
-        unsigned int unsigned_num = 429496725;//maximum number
+        unsigned int unsigned_num = 4294967295;//maximum number
 
         // return sizeof unsigned integer
         printf("Bytesize of unsigned_num is :%d bytes or %d bits \n", sizeof(unsigned_num), sizeof(unsigned_num) * 8);

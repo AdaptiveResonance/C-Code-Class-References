@@ -17,8 +17,9 @@ int main()
 //%d Integer 4bytes
 //&f Float 4bytes
 //%c Char 1byte
-//%lf Double 8bytes
+//%lf Double float 8bytes
 //%ld Long 4bytes (now 8bytes)
 //%lld long long 8bytes
 //%sd sort (Double precision integer)
 //%x hexadecimal output
+//%u 

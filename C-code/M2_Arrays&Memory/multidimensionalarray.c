@@ -4,7 +4,7 @@ int main()
 
 {
 	int index;
-	int arr[][3] = {{1,2,3},{3,4,5},{6,7,8}};//create array ?rowsx3columns which becomes 3x3 given the varaibles
+	int arr[][11] = {{1,2,3},{3,4,5},{6,7,8}};//create array ?rowsx3columns which becomes 3x3 given the varaibles
 	//1,2,3
 	//3,4,5
 	//6,7,8
@@ -16,8 +16,9 @@ int main()
 	
 	for(index = 0; index < 3; index++)
 	{
-		printf("%s", array[index]);
-		printf("%d", arr[index]);//arr[index][]
+		printf("%s \n", array[index]);
+		printf("%d \n", arr[index][0]);//arr[index][]
+		//cannot print whole string of integer
 	}
 	
 	
