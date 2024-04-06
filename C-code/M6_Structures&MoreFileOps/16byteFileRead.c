@@ -8,7 +8,7 @@ int print(char *buffer, int offsetcount)
 {
 	printf("%08x\t", offsetcount);
 		offsetcount = offsetcount + 16;
-    	for(int count =0; count < 16; count++)
+		for(int count =0; count < 16; count++)
 		{
 			if(buffer[count] == NULL)
 			{
@@ -37,15 +37,15 @@ int print(char *buffer, int offsetcount)
 int dump (char *file, int *offset)
 {
 	FILE *fileptr; // file pointer 
-    fileptr = fopen(file, "r");
-    if(fileptr == NULL)
-    {
-        fprintf(stderr, "there is an error in file path: %s\n", strerror(errno));
-        exit(-1);
-    }
-    
-    char buffer[17] = "\0";
-    char mirror [17] = "\0";
+	fileptr = fopen(file, "r");
+	if(fileptr == NULL)
+	{
+		fprintf(stderr, "there is an error in file path: %s\n", strerror(errno));
+		exit(-1);
+	}
+	
+	char buffer[17] = "\0";
+	char mirror [17] = "\0";
 	int offsetcount = *offset;
 	fseek(fileptr, 0, SEEK_END);
 	int size = ftell(fileptr);
@@ -56,7 +56,7 @@ int dump (char *file, int *offset)
 		fread(buffer, 1, 16, fileptr);
 		offsetcount = print(buffer, offsetcount);
 	}
-    fclose(fileptr);
+	fclose(fileptr);
 }
 int main(int argc, char *argv[])
 {

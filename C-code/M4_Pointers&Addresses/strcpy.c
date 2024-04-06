@@ -1,9 +1,10 @@
 #include<stdio.h>
 #include <string.h>
+
 //incomplete
 void strcpy1 (char *dest, char *src)
 {
-    strcpy(src, "Hola ")
+	strcpy(src, "Hola ")
 	strcpy(*dest, *src)//destination first then what we copy second
 }
 int main()

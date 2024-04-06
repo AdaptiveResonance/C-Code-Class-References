@@ -12,16 +12,16 @@
 
 int main()
     {	  
-        unsigned int unsigned_num = 4294967295;//maximum number
+	unsigned int unsigned_num = 4294967295;//maximum number
 
-        // return sizeof unsigned integer
-        printf("Bytesize of unsigned_num is :%d bytes or %d bits \n", sizeof(unsigned_num), sizeof(unsigned_num) * 8);
+	// return sizeof unsigned integer
+	printf("Bytesize of unsigned_num is :%d bytes or %d bits \n", sizeof(unsigned_num), sizeof(unsigned_num) * 8);
 
-        // Print initial value before change
-        printf("Initial unsigned_num value is: %u \n", unsigned_num);
+	// Print initial value before change
+	printf("Initial unsigned_num value is: %u \n", unsigned_num);
 
-        // Print new value
-        printf("%u + 1 = %u \n", unsigned_num, unsigned_num + 1);
-        //4294967295 + 1 = 4294967296 but returns 0 due to overflow
-        return 0;
+	// Print new value
+	printf("%u + 1 = %u \n", unsigned_num, unsigned_num + 1);
+	//4294967295 + 1 = 4294967296 but returns 0 due to overflow
+	return 0;
     }

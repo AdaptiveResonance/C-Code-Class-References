@@ -9,21 +9,21 @@ extern int errno;
 int read (char file[])
 {
 	FILE *fileptr; // file pointer 
-    fileptr = fopen(file, "r");
-    if(fileptr == NULL)
-    {
-        fprintf(stderr, "error in file path: %s\n", strerror(errno));
-        exit(-1);
-    }
-    char byte = 'Q';
-    
-    while(fread(&byte, 1, 1, fileptr) != 0)
-    {
-    	fprintf(stdout, "%c", byte);
-    	//fprintf(stdout, "Value: %x char: %c\n", byte, byte);
-    }
-    printf("\n");
-    fclose(fileptr);
+	fileptr = fopen(file, "r");
+	if(fileptr == NULL)
+	{
+		fprintf(stderr, "error in file path: %s\n", strerror(errno));
+		exit(-1);
+	}
+	char byte = 'Q';
+	
+	while(fread(&byte, 1, 1, fileptr) != 0)
+	{
+		fprintf(stdout, "%c", byte);
+		//fprintf(stdout, "Value: %x char: %c\n", byte, byte);
+	}
+	printf("\n");
+	fclose(fileptr);
 }
 char adder(char input[], int min, int inter)
 {
@@ -32,38 +32,38 @@ char adder(char input[], int min, int inter)
 int write (char file[],int min, int max, int inter, int size)	
 {
 	FILE *fileptr; // file pointer 
-    fileptr = fopen(file, "w");
-    if(fileptr == NULL)
-    {
-        fprintf(stderr, "error in file path: %s\n", strerror(errno));
-        exit(-1);
-    }
-    char input[size];
-    adder(input, min, 0);
-    fprintf(fileptr, "%s", input);
-    printf("%s", input);
-    fclose(fileptr);
+	fileptr = fopen(file, "w");
+	if(fileptr == NULL)
+	{
+		fprintf(stderr, "error in file path: %s\n", strerror(errno));
+		exit(-1);
+	}
+	char input[size];
+	adder(input, min, 0);
+	fprintf(fileptr, "%s", input);
+	printf("%s", input);
+	fclose(fileptr);
 	fileptr = fopen(file, "a");
-    for(min; min < max; min=min+inter)
-    {
-    	
-    	adder(input, min, inter);
-    	//printf("looping min: %d max: %d inter: %d current: %s\n", min, max, inter, input);
+	for(min; min < max; min=min+inter)
+	{
+		
+		adder(input, min, inter);
+		//printf("looping min: %d max: %d inter: %d current: %s\n", min, max, inter, input);
 		fprintf(fileptr, " %s", input);
 		printf(" %s", input);
-    }
-    fclose(fileptr);
-    printf("\n");
-    printf("would you like to read it?");
-    scanf("%1[^\n]c",input);
-    printf("%s", input);
-    if (input[0]=='y'|| input[0]=='Y')
-    {
-    	printf("\n");
-    	read(file);
-    }
-    else
-    exit(1);
+	}
+	fclose(fileptr);
+	printf("\n");
+	printf("would you like to read it?");
+	scanf("%1[^\n]c",input);
+	printf("%s", input);
+	if (input[0]=='y'|| input[0]=='Y')
+	{
+		printf("\n");
+		read(file);
+	}
+	else
+	exit(1);
 }	
 
 int check(int argc, char *args[])

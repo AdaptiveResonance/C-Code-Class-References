@@ -17,8 +17,8 @@ int main()
 	if(fileptr == NULL)
 	{
 		fprintf(stderr, "The file didn't open: %s [*] %d\n", strerror(errno), errno);
-        for(int count = 0; count < 10; count++)
-            fprintf(stderr, "\n%s\n", strerror(count));
+		for(int count = 0; count < 10; count++)
+			fprintf(stderr, "\n%s\n", strerror(count));
 		exit(-1);
 	}
 	printf("Please enter a string to write to file:");
