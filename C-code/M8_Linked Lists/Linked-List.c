@@ -119,7 +119,7 @@ int remove_by_value(node_chain ** head, int data) {
 	node_chain * current = *head;
 	node_chain * temp_node = NULL;
 
-    //initial check for head
+	//initial check for head
 	if (current->data==data) {
 		return pop_head(head);
 	}
@@ -154,7 +154,7 @@ int main() {
 	print_list(My_linked_list);
 	remove_by_value(&My_linked_list, 3);
 	remove_by_index(&My_linked_list, 2);
-    //index #2 is the new 3rd entry after removing 3rd VALUE
+	//index #2 is the new 3rd entry after removing 3rd VALUE
 
 	push_first(&My_linked_list, 15);
 	push_last(My_linked_list, 45);
